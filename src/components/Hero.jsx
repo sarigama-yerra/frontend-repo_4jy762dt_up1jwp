@@ -1,17 +1,11 @@
-import Spline from '@splinetool/react-spline'
-
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] pt-24 overflow-hidden">
-      <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/41MGRk-UDPKO-l6W/scene.splinecode" style={{ width: '100%', height: '100%' }} />
-      </div>
-
+    <section className="relative min-h-[80vh] pt-24 overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50">
       <div className="relative z-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 items-center gap-10">
-            <div className="backdrop-blur-xl bg-white/40 rounded-2xl p-6 sm:p-10 shadow-lg">
-              <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-3 py-1 text-xs font-medium text-slate-700">
+            <div className="rounded-2xl p-0">
+              <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-700">
                 <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
                 All-in-one social media OS
               </div>
@@ -25,18 +19,27 @@ export default function Hero() {
                 <a href="#pricing" className="inline-flex justify-center rounded-lg bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500">
                   Start Free Trial
                 </a>
-                <a href="/features" className="inline-flex justify-center rounded-lg bg-white/80 px-5 py-3 text-sm font-semibold text-slate-900 ring-1 ring-inset ring-slate-200 hover:bg-white">
+                <a href="/features" className="inline-flex justify-center rounded-lg bg-white px-5 py-3 text-sm font-semibold text-slate-900 ring-1 ring-inset ring-slate-200 hover:bg-slate-50">
                   Explore Features
                 </a>
               </div>
-              <p className="mt-3 text-xs text-slate-600">No credit card required · Cancel anytime</p>
+              <p className="mt-3 text-xs text-slate-600">Free trial · Cancel anytime</p>
             </div>
-            <div className="hidden lg:block"></div>
+            <div className="relative">
+              <div className="aspect-[16/10] w-full rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+                <div className="h-full w-full bg-[radial-gradient(circle_at_30%_20%,rgba(79,70,229,0.12),transparent_40%),radial-gradient(circle_at_70%_80%,rgba(14,165,233,0.14),transparent_35%)]"/>
+                <div className="absolute inset-0 p-4 sm:p-6 lg:p-8 flex items-end">
+                  <div className="rounded-lg bg-white/90 backdrop-blur border border-slate-200 px-3 py-2 text-xs text-slate-600 shadow-sm">
+                    Preview of your unified calendar, inbox and analytics dashboard.
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/60 via-white/30 to-white"></div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-slate-50 to-transparent"/>
     </section>
   )
 }
